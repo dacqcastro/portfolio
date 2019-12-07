@@ -27,8 +27,8 @@ const ProjectsModal = () => {
               <li><img src={node} alt="nodeJs" /></li>
             </ul>
             <div className="links">
-              <a href="https://github.com/dacqcastro" target="_blank" rel="noopener noreferrer">Code</a>
-              <a href="https://github.com/dacqcastro" target="_blank" rel="noopener noreferrer">Demo</a>
+              <a href="https://github.com/dacqcastro/socialdevapp" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://socialdevapp.netlify.com" target="_blank" rel="noopener noreferrer">Demo</a>
             </div>
           </div>
         </div>
