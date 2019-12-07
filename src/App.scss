@@ -45,8 +45,8 @@
         float: left;
         border-right: 4px solid #000;
         box-sizing: border-box;
-        animation: startup 1s cubic-bezier(0.1, 1.0, 0.1, 1.0) forwards;
-        opacity: 0;
+        // animation: startup 1s cubic-bezier(0.1, 1.0, 0.1, 1.0) forwards;
+        // opacity: 0;
         
         .location {
           margin-bottom: 40px;
@@ -103,8 +103,8 @@
         border-left: 4px solid #000;
         box-sizing: border-box;
         position: relative;
-        animation: startup 1s cubic-bezier(0.1, 1.0, 0.1, 1.0) .1s forwards;
-        opacity: 0;
+        // animation: startup 1s cubic-bezier(0.1, 1.0, 0.1, 1.0) .1s forwards;
+        // opacity: 0;
         
         .skills-projects-section {
           width: 50%;
