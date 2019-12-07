@@ -1,0 +1,942 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app .topbar {
+  width: 100%;
+  height: 70px;
+  border: 8px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+
+.app .topbar p {
+  padding-left: 20px;
+  font-size: 22px;
+}
+
+.app .lowerbar {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  border: 8px solid #000;
+  border-top: none;
+  overflow: hidden;
+}
+
+.app .lowerbar .left-section {
+  width: 50%;
+  height: 100%;
+  background-color: #64b2cd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+  border-right: 4px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) forwards;
+          animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) forwards;
+  opacity: 0;
+}
+
+.app .lowerbar .left-section .location {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.app .lowerbar .left-section .logo {
+  width: 140px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.app .lowerbar .left-section .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.app .lowerbar .left-section .i-am-section {
+  width: 196px;
+}
+
+.app .lowerbar .left-section .i-am-section .labels {
+  color: #fff;
+  height: 50px;
+  overflow: hidden;
+}
+
+.app .lowerbar .left-section .i-am-section .labels .label-list {
+  list-style: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.app .lowerbar .left-section .i-am-section .labels .label {
+  line-height: 50px;
+  background-color: #000;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.app .lowerbar .left-section .i-am-section .labels .label h1 {
+  letter-spacing: 2px;
+}
+
+.app .lowerbar .right-section {
+  width: 50%;
+  height: 100%;
+  float: right;
+  background-color: #000;
+  border-left: 4px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) 0.1s forwards;
+          animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) 0.1s forwards;
+  opacity: 0;
+}
+
+.app .lowerbar .right-section .skills-projects-section {
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: 4px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .skills-projects-section .section {
+  width: 100%;
+  height: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .skills-projects-section .projects {
+  border-bottom: 4px solid #000;
+}
+
+.app .lowerbar .right-section .skills-projects-section .skills {
+  border-top: 4px solid #000;
+}
+
+.app .lowerbar .right-section .social-contact-section {
+  width: 50%;
+  height: 100%;
+  float: right;
+  border-left: 4px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .social-contact-section .section {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .social-contact-section .about {
+  height: 45%;
+  border-bottom: 4px solid #000;
+}
+
+.app .lowerbar .right-section .social-contact-section .social-media {
+  height: 10%;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.app .lowerbar .right-section .social-contact-section .contact {
+  height: 45%;
+  border-top: 4px solid #000;
+}
+
+.app .lowerbar .right-section .modal {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+  overflow-x: hidden;
+}
+
+.app .lowerbar .right-section .modal .show-projects {
+  width: 100%;
+  height: 100%;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project {
+  position: relative;
+  padding-left: 200px;
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .pic {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  display: block;
+  width: 200px;
+  height: auto;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .pic:hover {
+  width: 400px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 50px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .project-info {
+  margin: 10px 0;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .stack-icons {
+  list-style: none;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .stack-icons li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .links a:nth-child(1) {
+  margin-right: 10px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 25px;
+  background-color: #575a78;
+  border-radius: 10px;
+}
+
+.app .lowerbar .right-section .modal .show-projects .container .project .body .links a:hover {
+  background-color: #555;
+}
+
+.app .lowerbar .right-section .modal .show-skills {
+  width: 100%;
+  height: 100%;
+}
+
+.app .lowerbar .right-section .modal .show-skills .container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.app .lowerbar .right-section .modal .show-skills .container .front-end, .app .lowerbar .right-section .modal .show-skills .container .back-end {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.app .lowerbar .right-section .modal .show-skills .container .front-end .title, .app .lowerbar .right-section .modal .show-skills .container .back-end .title {
+  display: inline-block;
+  background-color: #faf5ef;
+  color: #000;
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  left: 50px;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.app .lowerbar .right-section .modal .show-skills .container .front-end .skill-list, .app .lowerbar .right-section .modal .show-skills .container .back-end .skill-list {
+  list-style: none;
+  background-color: #faf5ef;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  padding: 50px 40px 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  text-align: center;
+}
+
+.app .lowerbar .right-section .modal .show-skills .container .front-end .skill-list li p, .app .lowerbar .right-section .modal .show-skills .container .back-end .skill-list li p {
+  font-weight: 700;
+}
+
+.app .lowerbar .right-section .modal .show-skills .container .back-end {
+  margin-top: 50px;
+}
+
+.app .lowerbar .right-section .modal .show-skills .container .back-end .title {
+  left: auto;
+  right: 50px;
+}
+
+.app .lowerbar .right-section .modal .show-contact {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("https://carlisletheacarlisletheatre.org/images/lines-png-aesthetic.png") center no-repeat;
+  background-size: 700px;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container {
+  width: 60%;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container #subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 30px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info #or {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info ul {
+  list-style: none;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info ul li {
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info ul li #location {
+  margin-left: 10px;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info ul li #email {
+  margin-left: 10px;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info #second-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info #second-list li {
+  display: inline;
+  padding: 0 5px;
+}
+
+.app .lowerbar .right-section .modal .show-contact .container .info #second-list li a {
+  color: inherit;
+}
+
+.app .lowerbar .right-section .modal .show-about {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("https://carlisletheacarlisletheatre.org/images/lines-png-aesthetic.png") center no-repeat;
+  background-size: 700px;
+}
+
+.app .lowerbar .right-section .modal .show-about .container {
+  width: 60%;
+  font-weight: 700;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.app .lowerbar .right-section .modal .show-about .container h2 {
+  margin-bottom: 20px;
+}
+
+.app .lowerbar .right-section .close-modal {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  width: 100px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 8px solid #000;
+  border-top: 8px solid #000;
+  padding-bottom: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 800;
+  font-size: 30px;
+  z-index: -1;
+}
+
+.app .lowerbar .right-section .close-modal:hover {
+  color: #fff;
+  background: #000 !important;
+  cursor: pointer;
+}
+
+.app .lowerbar .right-section .projects {
+  background-color: #575a78;
+  cursor: pointer;
+}
+
+.app .lowerbar .right-section .projects .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.app .lowerbar .right-section .projects .container:hover {
+  background-color: #484a63;
+}
+
+.app .lowerbar .right-section .projects .container .title {
+  font-weight: 800;
+  position: absolute;
+  font-size: 18px;
+  bottom: 50px;
+  left: 50px;
+}
+
+.app .lowerbar .right-section .projects .container .title span {
+  font-size: 36px;
+}
+
+.app .lowerbar .right-section .skills {
+  background-color: #5c7658;
+}
+
+.app .lowerbar .right-section .skills:hover {
+  cursor: pointer;
+}
+
+.app .lowerbar .right-section .skills .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.app .lowerbar .right-section .skills .container:hover {
+  background-color: #50664d;
+}
+
+.app .lowerbar .right-section .skills .container .title {
+  font-weight: 800;
+  position: absolute;
+  font-size: 18px;
+  bottom: 50px;
+  left: 50px;
+}
+
+.app .lowerbar .right-section .skills .container .title span {
+  font-size: 36px;
+}
+
+.app .lowerbar .right-section .about {
+  background-color: #da9833;
+  cursor: pointer;
+}
+
+.app .lowerbar .right-section .about .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.app .lowerbar .right-section .about .container:hover {
+  background-color: #bf862e;
+}
+
+.app .lowerbar .right-section .about .container .title {
+  font-weight: 800;
+  position: absolute;
+  font-size: 18px;
+  bottom: 50px;
+  left: 50px;
+}
+
+.app .lowerbar .right-section .about .container .title span {
+  font-size: 36px;
+}
+
+.app .lowerbar .right-section .social-media {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+  background-color: #000;
+}
+
+.app .lowerbar .right-section .social-media .icon {
+  height: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.app .lowerbar .right-section .social-media .icon:hover {
+  background-color: #000;
+}
+
+.app .lowerbar .right-section .social-media .icon:hover a {
+  color: #fff;
+}
+
+.app .lowerbar .right-section .social-media .icon a {
+  color: #000;
+}
+
+.app .lowerbar .right-section .social-media .github {
+  background-color: #fff;
+}
+
+.app .lowerbar .right-section .social-media .codepen {
+  background-color: #fff;
+}
+
+.app .lowerbar .right-section .social-media .email {
+  background-color: #fff;
+}
+
+.app .lowerbar .right-section .contact {
+  background-color: #943855;
+  cursor: pointer;
+}
+
+.app .lowerbar .right-section .contact .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.app .lowerbar .right-section .contact .container:hover {
+  background-color: #7d2f48;
+}
+
+.app .lowerbar .right-section .contact .container .title {
+  font-weight: 800;
+  position: absolute;
+  font-size: 18px;
+  bottom: 50px;
+  left: 50px;
+}
+
+.app .lowerbar .right-section .contact .container .title span {
+  font-size: 36px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ababab;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+@-webkit-keyframes startup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes startup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes modalOpen {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    z-index: 2;
+    opacity: 1;
+  }
+}
+
+@keyframes modalOpen {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    z-index: 2;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modalOpenRev {
+  0% {
+    opacity: 1;
+    z-index: 2;
+    top: 0;
+  }
+  50% {
+    z-index: -1;
+  }
+  100% {
+    top: 50px;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes modalOpenRev {
+  0% {
+    opacity: 1;
+    z-index: 2;
+    top: 0;
+  }
+  50% {
+    z-index: -1;
+  }
+  100% {
+    top: 50px;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes closeBtn {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -70px;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes closeBtn {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -70px;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@-webkit-keyframes closeBtnRev {
+  0% {
+    opacity: 1;
+    top: -70px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes closeBtnRev {
+  0% {
+    opacity: 1;
+    top: -70px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app .lowerbar .right-section .section .title {
+    bottom: 40px !important;
+    left: 30px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .app {
+    height: auto;
+    width: 100%;
+  }
+  .app .lowerbar {
+    position: static !important;
+    height: 1600px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+  }
+  .app .lowerbar .left-section {
+    width: 100%;
+    height: 35%;
+    border: none;
+    border-bottom: 8px solid #000;
+  }
+  .app .lowerbar .right-section {
+    width: 100%;
+    height: 65%;
+    border: none;
+    position: static !important;
+  }
+  .app .lowerbar .right-section .modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .app .lowerbar .right-section .close-modal {
+    position: fixed;
+    left: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+  }
+  @-webkit-keyframes closeBtn {
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 20px;
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  @keyframes closeBtn {
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 20px;
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media (max-width: 500px) {
+  .app .lowerbar .right-section .skills-projects-section {
+    width: 100%;
+    height: 50%;
+    border: none;
+  }
+  .app .lowerbar .right-section .social-contact-section {
+    width: 100%;
+    height: 50%;
+    float: left;
+    border: none;
+    border-top: 8px solid #000;
+  }
+  .app .lowerbar .right-section .show-projects .container .project {
+    padding-left: 0 !important;
+  }
+  .app .lowerbar .right-section .show-projects .container .project .pic {
+    position: relative !important;
+    top: 30px !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .app .lowerbar .right-section .show-projects .container .project .body {
+    padding-left: 20px !important;
+    padding-top: 40px !important;
+  }
+}
+/*# sourceMappingURL=App.css.map */
