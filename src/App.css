@@ -62,9 +62,6 @@
   border-right: 4px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) forwards;
-          animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) forwards;
-  opacity: 0;
 }
 
 .app .lowerbar .left-section .location {
@@ -122,9 +119,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  -webkit-animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) 0.1s forwards;
-          animation: startup 1s cubic-bezier(0.1, 1, 0.1, 1) 0.1s forwards;
-  opacity: 0;
 }
 
 .app .lowerbar .right-section .skills-projects-section {
