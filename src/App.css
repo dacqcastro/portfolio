@@ -370,7 +370,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("https://carlisletheacarlisletheatre.org/images/lines-png-aesthetic.png") center no-repeat;
+  background: url("./images/lines.png") center no-repeat;
   background-size: 700px;
 }
 
@@ -461,7 +461,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("https://carlisletheacarlisletheatre.org/images/lines-png-aesthetic.png") center no-repeat;
+  background: url("./images/lines.png") center no-repeat;
   background-size: 700px;
 }
 
