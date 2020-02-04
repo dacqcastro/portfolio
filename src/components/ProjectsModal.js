@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import image1 from "../images/MixedDrink.png";
 import image2 from "../images/DevTweets.png";
 import image3 from "../images/JeepBuilds.png";
+import image4 from "../images/URLshortener.png";
 import demo from "../images/DevTweetsDemo.gif";
 
 import mongodb from "../images/mongodb.png";
@@ -55,6 +56,26 @@ const ProjectsModal = () => {
         <div className="gif" style={isOpen ? style1:style2}>
           <div onClick={setOpen} className="cls-demo"><i class="fas fa-times"></i></div>
           <img className="gif-demo" src={demo} alt="demo" />
+        </div>
+
+        <div className="project">
+          <div className="pic">
+            <img src={image4} alt="project-img"/>
+          </div>
+          <div className="body">
+            <h2 className="project-title"><u>URL Shortener</u></h2>
+            <p className="project-info">This like the title says, shortens URLs, I use AXIOS to do a GET request to the rel.link API which then returns a promise with a custom hashid which is what you use to redirect the person to the original URL. I also implemented local storage to store the previous URLs which the user can copy to their clipboard with just one click.</p>
+            <h2>Stack:</h2>
+            <ul className="stack-icons">
+              <li><img src={react} alt="react" /></li>
+              <li><img src={sass} alt="sass" /></li>
+            </ul>
+            <div className="links">
+              <a href="https://github.com/dacqcastro/urlshorty" target="_blank" rel="noopener noreferrer">Code</a>
+              <div className="btn not-allowed">demo</div>
+              <a href="https://urlshorty.netlify.com/" target="_blank" rel="noopener noreferrer">Website</a>
+            </div>
+          </div>
         </div>
         
         <div className="project">
